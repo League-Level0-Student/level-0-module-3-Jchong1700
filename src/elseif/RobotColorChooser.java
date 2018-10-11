@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 import java.awt.Color;
+import java.util.Random;
 
 
 public class RobotColorChooser {
@@ -15,6 +16,9 @@ public class RobotColorChooser {
 		//1. Create a new Robot
 		Robot momo = new Robot();
 		//3. Ask the user what color they would like the robot to draw
+		for (int i = 0; i < 7; i++) {
+			
+		
 	String color = JOptionPane.showInputDialog("What color of the rainbow do you want the robot to draw?");
 		//5. Use an if/else statement to set the pen color that the user requested
 if(color.equalsIgnoreCase("red")) {
@@ -36,7 +40,11 @@ else if (color.equalsIgnoreCase("purple")) {
 	momo.setPenColor(76, 0, 153);
 }
 else {
-	momo.setPenColor(, , );
+	Random jihyo = new Random();
+		int dahyun = jihyo.nextInt(255);
+		int tzuyu = jihyo.nextInt(255);
+		int sana = jihyo.nextInt(255);
+	momo.setPenColor(dahyun, tzuyu, sana);
 }
         //6. If the user doesn’t enter anything, choose a random color
 
@@ -48,7 +56,12 @@ else {
 		momo.miniaturize();
 		momo.setSpeed(100);
 		momo.penDown();
-	for (int i = 0; i < 4; i++) {
+			momo.move(100);
+			momo.turn(90);
+			momo.move(100);
+			momo.turn(90);
+			momo.move(100);
+			momo.turn(90);
 			momo.move(100);
 			momo.turn(90);
 			
