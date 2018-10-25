@@ -7,7 +7,7 @@ public static void main(String[] args) {
 	
 	Robot cheerUp = new Robot();
 	
-for(int i = 0; i<10; i++) {
+for(int i = 0; i<4; i++) {
 	cheerUp.penDown();
 	cheerUp.miniaturize();
 	cheerUp.setSpeed(50);
